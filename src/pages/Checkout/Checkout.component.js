@@ -9,6 +9,7 @@ import {
 import './Checkout.styles.scss';
 import { createStructuredSelector } from 'reselect';
 import CheckoutItem from '../../components/checkout_item/checkout_item.component';
+import StripeCheckoutButton from '../../components/stripe_button/stripe_button.component';
 
 const Checkout = ({ cartItems, totalValue }) => (
   <div className='checkout'>
@@ -36,6 +37,17 @@ const Checkout = ({ cartItems, totalValue }) => (
     <div className='total'>
       <span>TOTAL: ${totalValue}</span>
     </div>
+
+    <div className='test_warning'>
+      <b>DO NOT</b> put your real credit card info in the form, this site was
+      made as a portfolio project and does not sell any real product <br />
+      *If you want to see the checkout working, please use the following test
+      credit card for payments*
+      <br />
+      Number: 4242 4242 4242 4242 <br /> Expiration Date: 01/20 <br /> CVV: 123
+    </div>
+
+    <StripeCheckoutButton price={totalValue} />
   </div>
 );
 
