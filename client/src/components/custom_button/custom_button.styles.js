@@ -46,6 +46,13 @@ const isFooterPositioned = css`
   position: absolute;
   top: 255px;
   display: none;
+
+  @media screen and (max-width: 800px) {
+    opacity: 0.9;
+    display: block;
+    min-width: unset;
+    padding: 0 10px;
+  }
 `;
 
 const getButtonStyles = props => {

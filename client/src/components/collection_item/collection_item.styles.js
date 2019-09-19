@@ -7,9 +7,17 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+  }
 `;
 
 export const CollectionItemImage = styled.img`
+  @media screen and (max-width: 800px) {
+    opacity: unset;
+  }
+
   ${CollectionItemContainer}:hover & {
     opacity: 0.8;
   }
